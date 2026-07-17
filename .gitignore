@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+
+# Entorno virtual
+venv/
+
+# VSCode
+.vscode/
+
+# Archivos temporales
+*.log
+
+# Imágenes temporales
+uploads/
+
+# Python cache
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Windows
+Thumbs.db
+Desktop.ini

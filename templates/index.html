@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Inteligente IA</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <div class="badge">
+            <span>🧠 IA</span>
+            <span>ResNet18 + ONNX</span>
+        </div>
+
+        <h1>
+            Sistema Inteligente para la Clasificación
+            de Objetos Personales
+        </h1>
+
+        <p class="descripcion">
+            Detecta automáticamente celulares, lentes y carteras
+            utilizando Inteligencia Artificial basada en
+            <strong>ResNet18</strong> y <strong>ONNX Runtime</strong>.
+        </p>
+
+        <div class="modelo">
+            ✔ Modelo cargado correctamente
+        </div>
+
+        <div class="subida">
+
+            <label class="upload-box">
+
+                <input
+                    type="file"
+                    id="imagen"
+                    accept="image/*"
+                    hidden
+                >
+
+                <div class="upload-icon">
+                    📷
+                </div>
+
+                <h3>Selecciona una imagen</h3>
+
+                <p>
+                    Formatos compatibles:
+                    JPG · PNG · JPEG
+                </p>
+
+            </label>
+
+        </div>
+
+        <img
+            id="preview"
+            class="preview"
+        >
+
+        <button
+            id="btnAnalizar"
+            class="btn-principal"
+        >
+            Analizar imagen
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div>
+
+        Proyecto de Inteligencia Artificial
+
+    </div>
+
+    <div>
+
+        Universidad Politécnica Salesiana
+
+    </div>
+
+</footer>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
