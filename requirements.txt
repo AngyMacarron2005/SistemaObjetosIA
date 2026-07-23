@@ -4,6 +4,6 @@ jinja2
 python-multipart
 pillow
 numpy
+torch
+torchvision
 onnxruntime
-torch==2.7.1
-torchvision==0.22.1
