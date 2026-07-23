@@ -4,101 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema Inteligente IA</title>
+    <title>Sistema Inteligente para la Clasificación de Objetos Personales</title>
 
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 
 <body>
 
-<div class="background"></div>
+    <div class="contenedor">
 
-<div class="contenedor">
+        <header>
+            <h1>Sistema Inteligente para la Clasificación de Objetos Personales</h1>
+            <p>
+                Clasificación automática de objetos mediante Inteligencia Artificial
+                utilizando una red neuronal ResNet18 y ONNX Runtime.
+            </p>
+        </header>
 
-    <div class="card">
+        <section class="tarjeta">
 
-        <div class="badge">
-            <span>🧠 IA</span>
-            <span>ResNet18 + ONNX</span>
-        </div>
+            <h2>Seleccionar imagen</h2>
 
-        <h1>
-            Sistema Inteligente para la Clasificación
-            de Objetos Personales
-        </h1>
+            <input type="file" id="imagenInput" accept="image/*">
 
-        <p class="descripcion">
-            Detecta automáticamente celulares, lentes y carteras
-            utilizando Inteligencia Artificial basada en
-            <strong>ResNet18</strong> y <strong>ONNX Runtime</strong>.
-        </p>
+            <div class="vista-previa">
+                <img id="preview" style="display:none;">
+            </div>
 
-        <div class="modelo">
-            ✔ Modelo cargado correctamente
-        </div>
+            <button id="btnAnalizar">
+                Analizar imagen
+            </button>
 
-        <div class="subida">
+            <div id="resultado" class="resultado"></div>
 
-            <label class="upload-box">
-
-                <input
-                    type="file"
-                    id="imagen"
-                    accept="image/*"
-                    hidden
-                >
-
-                <div class="upload-icon">
-                    📷
-                </div>
-
-                <h3>Selecciona una imagen</h3>
-
-                <p>
-                    Formatos compatibles:
-                    JPG · PNG · JPEG
-                </p>
-
-            </label>
-
-        </div>
-
-        <img
-            id="preview"
-            class="preview"
-        >
-
-        <button
-            id="btnAnalizar"
-            class="btn-principal"
-        >
-            Analizar imagen
-        </button>
-
-        <div id="resultado"></div>
+        </section>
 
     </div>
 
-</div>
-
-<footer>
-
-    <div>
-
-        Proyecto de Inteligencia Artificial
-
-    </div>
-
-    <div>
-
-        Universidad Politécnica Salesiana
-
-    </div>
-
-</footer>
-
-<script src="/static/js/script.js"></script>
+    <script src="/static/js/script.js"></script>
 
 </body>
+
 </html>
