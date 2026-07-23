@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+
     // ============================
     // Vista previa de imagen
     // ============================
@@ -22,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const archivo = this.files[0];
 
         if (!archivo) {
+
             preview.style.display = "none";
             return;
+
         }
 
 
@@ -44,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
     // ============================
     // Analizar imagen
     // ============================
@@ -59,20 +64,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        const archivo = inputImagen.files[0];
-
 
         const formData = new FormData();
-        formData.append("imagen", archivo);
+
+        formData.append(
+            "imagen",
+            inputImagen.files[0]
+        );
 
 
 
         resultado.style.display = "block";
 
+
         resultado.innerHTML = `
+
             <p class="cargando">
                 Analizando imagen...
             </p>
+
         `;
 
 
@@ -89,16 +99,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
             if (!respuesta.ok) {
 
+
                 resultado.innerHTML = `
+
                     <p class="error">
                         Error del servidor (${respuesta.status})
                     </p>
+
                 `;
 
                 return;
+
             }
+
+
 
 
 
@@ -110,12 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
             if (!Array.isArray(datos)) {
 
+
                 resultado.innerHTML = `
+
                     <p class="error">
                         Formato de respuesta incorrecto.
                     </p>
+
                 `;
 
                 return;
@@ -124,45 +145,133 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+            // Ordenar de mayor a menor probabilidad
+            datos.sort(
+                (a,b) => b.probabilidad - a.probabilidad
+            );
+
+
+
+
             let html = `
+
                 <h3>
                     Resultado del análisis
                 </h3>
+
             `;
+
 
 
 
             datos.forEach(item => {
 
 
+                let claseObjeto = item.clase
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+
+
+
+                let colorClase = "general";
+
+
+
+                if(item.detectado){
+
+
+                    switch(claseObjeto){
+
+
+                        case "celular":
+
+                            colorClase = "celular";
+                            break;
+
+
+
+                        case "lentes":
+
+                            colorClase = "lentes";
+                            break;
+
+
+
+                        case "cartera":
+
+                            colorClase = "cartera";
+                            break;
+
+
+
+                        default:
+
+                            colorClase = "general";
+
+                    }
+
+
+                }
+                else{
+
+                    colorClase = "no-detectado";
+
+                }
+
+
+
+
+
                 html += `
 
-                    <div class="resultado-item">
 
-                        <h4>${item.clase}</h4>
+                    <div class="resultado-item ${colorClase}">
+
+
+                        <h4>
+                            ${item.clase}
+                        </h4>
+
+
 
                         <p>
+
                             Probabilidad:
+
                             <strong>
                                 ${item.probabilidad}%
                             </strong>
+
                         </p>
+
+
 
 
                         <p>
+
                             Estado:
-                            <strong class="${item.detectado ? "detectado" : "no-detectado"}">
+
+                            <strong class="${item.detectado ? "detectado" : "no-detectado-text"}">
+
                                 ${item.detectado ? "Detectado" : "No detectado"}
+
                             </strong>
+
                         </p>
+
 
 
                     </div>
 
+
                 `;
 
 
+
             });
+
 
 
 
@@ -170,17 +279,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-        } catch (error) {
+
+        } catch(error) {
+
 
 
             console.error("Error:", error);
 
 
+
             resultado.innerHTML = `
 
+
                 <p class="error">
+
                     No fue posible conectar con el servidor.
+
                 </p>
+
 
             `;
 

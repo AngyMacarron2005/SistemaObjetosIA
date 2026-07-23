@@ -217,3 +217,61 @@ button:hover{
     }
 
 }
+
+.resultado-item{
+
+    padding:18px;
+    margin-top:15px;
+    border-radius:12px;
+    transition:.3s;
+
+}
+
+
+.resultado-item.celular{
+
+    background:#E8F5E9;
+    border-left:5px solid #4CAF50;
+
+}
+
+
+.resultado-item.lentes{
+
+    background:#EAF2F8;
+    border-left:5px solid #3498DB;
+
+}
+
+
+.resultado-item.cartera{
+
+    background:#FFF3E0;
+    border-left:5px solid #E67E22;
+
+}
+
+
+.resultado-item.general{
+
+    background:#F0F0F0;
+    border-left:5px solid #777;
+
+}
+
+
+.resultado-item.no-detectado{
+
+    background:#FAFAFA;
+    border-left:5px solid #CCC;
+
+}
+
+
+.resultado-item:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
