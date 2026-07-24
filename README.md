@@ -1,7 +1,9 @@
 # 📱 Clasificación de Objetos Personales Olvidados
 
 > **Prototipo de Detección de Objetos Olvidados en la Universidad Politécnica Salesiana (UPS)**  
-> *Proyecto de Inteligencia Artificial y Aprendizaje Automático*
+> *Proyecto de Inteligencia Artificial y Aprendizaje Automático*  
+> 🌐 **Demo en vivo:** [https://sistemaobjetosia-1.onrender.com/](https://sistemaobjetosia-1.onrender.com/)  
+> 📹 **Video Demostrativo:** [Ver en YouTube](https://youtu.be/z_XhrNtYYu4)
 
 ---
 
@@ -104,7 +106,9 @@ El modelo final corresponde a **ResNet18**, debido a su mayor precisión y menor
 
 ---
 
-# Aplicación Web
+# 🌐 Aplicación Web y Demostración
+
+- **Sitio Web en Vivo (Render):** [https://sistemaobjetosia-1.onrender.com/](https://sistemaobjetosia-1.onrender.com/)
 
 La aplicación web fue desarrollada utilizando:
 
@@ -121,6 +125,14 @@ La interfaz permite:
 - Ejecutar la inferencia del modelo.
 - Mostrar la probabilidad obtenida para cada objeto.
 - Resaltar automáticamente el objeto detectado con mayor confianza.
+
+---
+
+## 📹 Video Demostrativo
+
+[![Ver Demostración en YouTube](https://img.youtube.com/vi/z_XhrNtYYu4/hqdefault.jpg)](https://youtu.be/z_XhrNtYYu4)
+
+> 💡 *Haz clic en la imagen para reproducir la demostración en YouTube.*
 
 ---
 
