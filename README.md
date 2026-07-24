@@ -274,9 +274,7 @@ http://127.0.0.1:8000
 
 # Licencia
 
-Proyecto desarrollado para la asignatura de **Inteligencia Artificial y Aprendizaje Automático** de la **Universidad Politécnica Salesiana**.
-
-Su finalidad es exclusivamente académica y de investigación.
+Este proyecto se distribuye bajo la licencia **MIT**. Su finalidad es exclusivamente académica, educativa y de investigación.
 
 ---
 
