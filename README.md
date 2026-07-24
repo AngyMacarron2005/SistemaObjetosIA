@@ -1,7 +1,7 @@
 # 📱 Clasificación de Objetos Personales Olvidados
 
-> **Prototipo de Detección de Objetos Olvidados en la Universidad Politécnica Salesiana (UPS)**  
-> *Proyecto de Inteligencia Artificial y Aprendizaje Automático*  
+> **Sistema de Visión por Computadora para Detección de Objetos Olvidados (FastAPI & ONNX)**  
+> *Proyecto de Clasificación Multiclase con Redes Neuronales (ResNet18)*  
 > 🌐 **Demo en vivo:** [https://sistemaobjetosia-1.onrender.com/](https://sistemaobjetosia-1.onrender.com/)  
 > 📹 **Video Demostrativo:** [Ver en YouTube](https://youtu.be/z_XhrNtYYu4)
 
@@ -9,7 +9,7 @@
 
 # Descripción del Proyecto
 
-Este proyecto implementa un sistema inteligente para la **detección y clasificación automática de objetos personales olvidados** en las instalaciones de la Universidad Politécnica Salesiana (Cuenca, Ecuador).
+Este proyecto implementa un sistema inteligente para la **detección y clasificación automática de objetos personales olvidados** en entornos cerrados, oficinas, aulas o espacios de uso compartido.
 
 La solución utiliza técnicas de **Aprendizaje Profundo (Deep Learning)** mediante **Transfer Learning con ResNet18**, permitiendo identificar simultáneamente la presencia de:
 
@@ -21,15 +21,12 @@ El modelo fue exportado a **ONNX** para optimizar la inferencia y posteriormente
 
 ---
 
-# Autores y Afiliación
+# Autores y Desarrolladores
 
-- **Daniel Barros** (`dbarrosp1@est.ups.edu.ec`)
-- **Angélica Panamá** (`apanamar@est.ups.edu.ec`)
-- **Juan Rodríguez** (`jrodriguezc28@est.ups.edu.ec`)
-- **Xaxier Siguachi** (`xsiguachi@est.ups.edu.ec`)
-
-**Institución:** Carrera de Ciencias de la Computación  
-**Universidad Politécnica Salesiana (Cuenca, Ecuador)**
+- **Daniel Barros**
+- **Angélica Panamá**
+- **Juan Rodríguez**
+- **Xavier Siguachi**
 
 ---
 
